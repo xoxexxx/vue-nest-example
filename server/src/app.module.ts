@@ -4,6 +4,9 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ApiModule } from './api/api.module';
+import { TModule } from './t/t.module';
+import { LogModule } from './log/log.module';
+import { MapModule } from './map/map.module';
 // import { User } from './api/api.entity';
 import { join } from 'path';
 import { DataSource } from 'typeorm';
@@ -23,7 +26,7 @@ import { Set } from './app.entity'
         host: 'localhost',
         port: 3306,
         username: 'root',
-        password: 'root',
+        password: 'MyNewPass5!',
         database: 'telemarket',
         // entities: [User],
         entities: [join(process.cwd(), 'dist/**/*.entity.js')],
@@ -37,7 +40,10 @@ import { Set } from './app.entity'
         return dataSource;  
       }
     }),
-    ApiModule
+    MapModule,
+    LogModule,
+    ApiModule,
+    TModule
   ],
   controllers: [AppController],
   providers: [AppService],

